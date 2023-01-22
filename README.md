@@ -10,9 +10,8 @@ network:
    ens18:
      dhcp4: no
      dhcp6: no
-     match:
    ens19:
-     match: 
+ 
        
  bonds:
    bond0:
@@ -57,6 +56,5 @@ network:
  #ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/ssh.sh
  #ssh root@v1251486.hosted-by-vdsina.ru -p 2222
  ```
- 
  
  
