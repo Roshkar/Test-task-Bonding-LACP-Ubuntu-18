@@ -2,6 +2,7 @@
 
 #root@tryit-legible:/etc/netplan# vi /etc/netplan/netconfig.yaml
 
+```yml
 network:
  version: 2
  renderer: networkd
@@ -25,19 +26,20 @@ network:
        mode: 802.3ad
        lacp-rate: fast
        mii-monitor-interval: 100
-
+```
+```bash
  #root@tryit-legible:netplan try  
  #root@tryit-legible:netplan apply 
  #root@tryit-legible:reboot    
        
- #Ubuntu Удалённая смена пароля пользователя
+ # Ubuntu Удалённая смена пароля пользователя
  #root@tryit-legible: nano passwd.sh
  ##!/bin/bash
  #echo 'user:123456' | chpasswd
  #root@tryit-legible: chmod +x passwd.sh
  #ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/psswd.sh
  
- #Ubuntu Создание пользователя с паролем
+ # Ubuntu Создание пользователя с паролем
  #root@tryit-legible: nano passwd.sh
  #sudo adduser user1
  ##!/bin/bash
@@ -46,7 +48,7 @@ network:
  #root@tryit-legible: chmod +x adduser.sh
  #ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/adduser.sh
  
- #Ubuntu Смена стандартного порта ssh
+ # Ubuntu Смена стандартного порта ssh
  #root@tryit-legible: nano ssh.sh
  ##!/bin/bash
  #echo 'Port 2222' >> /etc/ssh/sshd_config
@@ -54,3 +56,7 @@ network:
  #root@tryit-legible: chmod +x ssh.sh
  #ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/ssh.sh
  #ssh root@v1251486.hosted-by-vdsina.ru -p 2222
+ ```
+ 
+ 
+ 
