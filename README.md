@@ -27,34 +27,39 @@ network:
        mii-monitor-interval: 100
 ```
 ```bash
- #root@tryit-legible:netplan try  
- #root@tryit-legible:netplan apply 
- #root@tryit-legible:reboot    
-       
+ root@tryit-legible:netplan try  
+ root@tryit-legible:netplan apply 
+ root@tryit-legible:reboot    
+ ```      
  # Ubuntu Удалённая смена пароля пользователя
- #root@tryit-legible: nano passwd.sh
- ##!/bin/bash
- #echo 'user:123456' | chpasswd
- #root@tryit-legible: chmod +x passwd.sh
- #ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/psswd.sh
- 
+ ```bash
+ root@tryit-legible: nano passwd.sh
+ #!/bin/bash
+ echo 'user:123456' | chpasswd
+ root@tryit-legible: chmod +x passwd.sh
+ ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/psswd.sh
+ ```
+
  # Ubuntu Создание пользователя с паролем
- #root@tryit-legible: nano passwd.sh
- #sudo adduser user1
- ##!/bin/bash
- #useradd user2
- #echo 'user2:1234567' | chpasswd
- #root@tryit-legible: chmod +x adduser.sh
- #ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/adduser.sh
+  ```bash
+ root@tryit-legible: nano passwd.sh
+ sudo adduser user1
+ #!/bin/bash
+ useradd user2
+ echo 'user2:1234567' | chpasswd
+ root@tryit-legible: chmod +x adduser.sh
+ ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/adduser.sh
+ ```
  
  # Ubuntu Смена стандартного порта ssh
- #root@tryit-legible: nano ssh.sh
- ##!/bin/bash
- #echo 'Port 2222' >> /etc/ssh/sshd_config
- #systemctl restart sshd
- #root@tryit-legible: chmod +x ssh.sh
- #ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/ssh.sh
- #ssh root@v1251486.hosted-by-vdsina.ru -p 2222
+ ```bash
+ root@tryit-legible: nano ssh.sh
+ #!/bin/bash
+ echo 'Port 2222' >> /etc/ssh/sshd_config
+ systemctl restart sshd
+ root@tryit-legible: chmod +x ssh.sh
+ ssh root@v1251486.hosted-by-vdsina.ru 'bash -s' < /home/user/ssh.sh
+ ssh root@v1251486.hosted-by-vdsina.ru -p 2222
  ```
  
  
