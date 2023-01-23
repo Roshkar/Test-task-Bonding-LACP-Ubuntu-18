@@ -43,7 +43,6 @@ network:
  # Ubuntu Создание пользователя с паролем
   ```bash
  root@tryit-legible: nano passwd.sh
- sudo adduser user1
  #!/bin/bash
  useradd user2
  echo 'user2:1234567' | chpasswd
