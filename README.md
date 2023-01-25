@@ -11,6 +11,7 @@ network:
      dhcp4: no
      dhcp6: no
    ens19:
+     dhcp4: no
  
        
  bonds:
